@@ -9,7 +9,7 @@ function Features() {
                     Hakkımızda
                 </h2>
                 <p className="max-w-md text-center md:text-left">
-                    ZARA TAAHHÜT A.Ş. 2014 yılında Yönetim Kurulu Başkanımız Sayın <strong>Emre Demirci</strong> tarafından kamu taahhüt projelerinin yapımını gerçekleştirmek üzere kurulmuştur. ZARA Taahhüt tüm ülke çapında altyapıdan üstyapıya çeşitli inşaat projelerinin yapımını gerçekleştirir, <strong>riskleri iyi yöneterek</strong>, ürün ve hizmetlerini taahhüt ettiği <strong>kalitede</strong>, <strong>sürede</strong> ve öngörülen <strong>bütçede</strong> tamamlama hedefine daima ulaşır.
+                    ZARA TAAHHÜT A.Ş. 2014 yılında Yönetim Kurulu Başkanımız Sayın <span className='text-brightRed'><strong>Emre Demirci</strong></span> tarafından kamu taahhüt projelerinin yapımını gerçekleştirmek üzere kurulmuştur. ZARA Taahhüt tüm ülke çapında altyapıdan üstyapıya çeşitli inşaat projelerinin yapımını gerçekleştirir, <span className='text-brightRed'><strong>riskleri iyi yöneterek</strong></span>, ürün ve hizmetlerini taahhüt ettiği <span className='text-brightRed'><strong>kalitede</strong></span>, <span className='text-brightRed'><strong>sürede</strong></span> ve öngörülen <span className='text-brightRed'><strong>bütçede</strong></span> tamamlama hedefine daima ulaşır.
                 </p>
             </div>
 
