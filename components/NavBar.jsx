@@ -4,7 +4,7 @@ import zara3 from "../img/zara3.png"
 
 function NavBar() {
   return (
-        <nav className="relative bg-black mx-auto p-3 border-b-2 border-grayBedri">
+        <nav className="w-full mx-auto p-3 border-b-2 border-grayBedri">
             {/* flex container */}
             <div className="flex items-center justify-between">
                 {/* logo */}
