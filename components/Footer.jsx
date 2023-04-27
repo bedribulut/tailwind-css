@@ -7,19 +7,53 @@ function Footer() {
   return (
     <footer className="self-end w-full border-t-2 border-grayBedri">
         {/* flex container */}
-        <div className="flex flex-col items-center justify-between py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+        <div className="flex flex-col-reverse items-center justify-between py-10 px-8 mx-auto md:flex-row md:space-y-0">
             {/* logo and social links container */}
-            <div className="flex flex-col items-center justify-between space-y-12 md:space-y-0 md:items-start md:flex-row md:space-x-8">
-                <div>
-                    <Image src={zara3} width={130} className="bg-grayBedri p-3 rounded"/>
-                    
+            <div className="flex flex-col-reverse items-center justify-between space-y-6 md:flex-col md:items-center md:space-y-2">
+                <div className="mx-auto my-4 text-center text-white md:hidden">
+                    <p>
+                        &copy; 2023 Zara Taahhüt A.Ş.
+                    </p>
+                    <p>
+                        Tüm Hakları Saklıdır
+                    </p>
+                    <p className="text-sm mt-3">
+                        designed and developed by <Link href="https://github.com/bedribulut" target="_blank" className="text-brightRed hover:underline">bedribulut</Link>
+                    </p>
                 </div>
                 <div>
+                    <Image src={zara3} width={130} className="bg-grayBedri p-3 rounded" alt=""/>
+                    
+                </div>
+                <div className="md:text-center">
                     <Link href="https://www.instagram.com/zara_a.s/" target="_blank">
-                        <BsInstagram size={60} />
+                        <BsInstagram size={40} />
                     </Link>
-                </div>
+                </div>         
+            </div>
+            {/* list container */}
+            <div className="flex justify-around space-x-16">
+                <div className="flex flex-col space-y-3 text-white">
+                    <Link href="/about" className="hover:underline ">Hakkımızda</Link>
+                    <Link href="/news" className="hover:underline ">Haberler</Link>
+                    <Link href="/contact" className="hover:underline ">İletişim</Link>
                     
+                </div>
+                <div className="flex flex-col space-y-3 text-white">
+                    <Link href="/references" className="hover:underline ">Referanslarımız</Link>
+                    <Link href="/career" className="hover:underline ">Kariyer</Link>
+                </div>
+            </div>
+            <div className="hidden text-white md:block">
+                <p>
+                    &copy; 2023 Zara Taahhüt A.Ş.
+                </p>
+                <p>
+                    Tüm Hakları Saklıdır
+                </p>
+                <p className="text-sm mt-3">
+                    designed and developed by <Link href="https://github.com/bedribulut" target="_blank" className="text-brightRed hover:underline">bedribulut</Link>
+                </p>
             </div>
         </div>
     </footer>
