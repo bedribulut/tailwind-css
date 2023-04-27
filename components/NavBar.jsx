@@ -13,7 +13,7 @@ function NavBar() {
   return (
         <nav className="w-full mx-auto p-3 border-b-2 border-grayBedri">
             {/* flex container */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col flex-wrap items-center justify-between space-y-3 md:flex-row">
                 {/* logo */}
                 <div className="pt-2">
                     <Link href="/">
@@ -38,7 +38,7 @@ function NavBar() {
                 <button className={isNavOpen ? `hidden` : ""} onClick={() => {setIsNavOpen((prev) => !prev)}}>
                     <RiCloseFill size={50} />
                 </button>
-                <div className={isNavOpen ? `hidden` : `flex flex-col space-y-2`}>
+                <div className={isNavOpen ? `hidden` : `flex flex-col w-full items-center space-y-2`}>
                     <Link href="/about" className="hover:underline text-grayBedri">Hakkımızda</Link>
                     <Link href="/news" className="hover:underline text-grayBedri">Haberler</Link>
                     <Link href="/contact" className="hover:underline text-grayBedri">İletişim</Link>
