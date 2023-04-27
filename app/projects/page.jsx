@@ -1,8 +1,15 @@
-import React from 'react'
+"use client";
+
+import Link from "next/link";
+
 
 function Projects() {
   return (
-    <div>Projects</div>
+    <div>
+      <div>
+        <Link href="./projects/ongoing-projects">devam eden</Link>
+      </div>
+    </div>
   )
 }
 

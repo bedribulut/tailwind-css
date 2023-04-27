@@ -1,9 +1,21 @@
-import React from 'react'
+"use client";
 
-function Ongoing() {
+import CardExample from "../CardExample";
+
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Typography,
+  Avatar,
+} from "@material-tailwind/react";
+
+function Projects() {
   return (
-    <div>Ongoing</div>
+    <div>
+      <CardExample />
+    </div>
   )
 }
 
-export default Ongoing
+export default Projects
