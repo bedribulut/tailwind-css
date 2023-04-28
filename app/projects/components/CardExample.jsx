@@ -35,7 +35,7 @@ export default function Example({name, author, year, imgSrc}) {
           {name}
         </Typography>
         <Typography variant="h5" className="mb-4 text-gray-400">
-          Candice Wu
+          {year}<br/>{author}
         </Typography>
         <Avatar
           size="xl"
