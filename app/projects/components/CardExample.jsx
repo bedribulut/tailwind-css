@@ -8,12 +8,12 @@ import {
   Avatar,
 } from "@material-tailwind/react";
  
-export default function Example({name, author, year, imgSrc}) {
+export default function Example({name, author, year, imgSrc, logo}) {
 
   return (
     <Card
       shadow={false}
-      className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
+      className="relative grid min-h-screen m-auto w-full items-end justify-center overflow-hidden text-center md:w-1/3"
     >
       <CardHeader
         floated={false}
@@ -26,7 +26,7 @@ export default function Example({name, author, year, imgSrc}) {
       >
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
       </CardHeader>
-      <CardBody className="relative py-14 px-6 md:px-12">
+      <CardBody className="relative">
         <Typography
           variant="h2"
           color="white"
@@ -38,11 +38,11 @@ export default function Example({name, author, year, imgSrc}) {
           {year}<br/>{author}
         </Typography>
         <Avatar
-          size="xl"
+          size="xxl"
           variant="circular"
           alt="candice wu"
           className="border-2 border-white"
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+          src={logo}
         />
       </CardBody>
     </Card>
