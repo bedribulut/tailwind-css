@@ -34,14 +34,15 @@ function Footer() {
             {/* list container */}
             <div className="flex justify-around space-x-16">
                 <div className="flex flex-col space-y-3 text-white">
+                    <Link href="/" className="hover:underline ">Ana Sayfa</Link>
                     <Link href="/about" className="hover:underline ">Hakkımızda</Link>
-                    <Link href="/news" className="hover:underline ">Haberler</Link>
-                    <Link href="/contact" className="hover:underline ">İletişim</Link>
+                    <Link href="/projects" className="hover:underline ">Projeler</Link>
+                    
                     
                 </div>
                 <div className="flex flex-col space-y-3 text-white">
+                    <Link href="/contact" className="hover:underline ">İletişim</Link>
                     <Link href="/references" className="hover:underline ">Referanslarımız</Link>
-                    <Link href="/career" className="hover:underline ">Kariyer</Link>
                 </div>
             </div>
             <div className="hidden text-white md:block">

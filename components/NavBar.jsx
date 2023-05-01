@@ -23,11 +23,11 @@ function NavBar() {
 
                 {/* menu items */}
                 <div className="hidden space-x-6 md:flex">
-                    <Link href="/about" className="hover:underline text-grayBedri">Hakkımızda</Link>
-                    <Link href="/projects" className="hover:underline text-grayBedri">Projeler</Link>
-                    <Link href="/contact" className="hover:underline text-grayBedri">İletişim</Link>
-                    <Link href="/references" className="hover:underline text-grayBedri">Referanslarımız</Link>
-                    <Link href="/career" className="hover:underline text-grayBedri">Kariyer</Link>
+                    <Link href="/" className="hover:text-brightRed text-grayBedri">Ana Sayfa</Link>
+                    <Link href="/about" className="hover:text-brightRed text-grayBedri">Hakkımızda</Link>
+                    <Link href="/projects" className="hover:text-brightRed text-grayBedri">Projeler</Link>
+                    <Link href="/contact" className="hover:text-brightRed text-grayBedri">İletişim</Link>
+                    <Link href="/references" className="hover:text-brightRed text-grayBedri">Referanslarımız</Link>
                 </div>
 
                 <button className={isNavOpen ? "md:hidden" : "hidden"} onClick={() => {setIsNavOpen((prev) => !prev)}}>
@@ -37,6 +37,7 @@ function NavBar() {
                     <RiCloseFill size={50} />
                 </button>
                 <div className={isNavOpen ? `hidden` : `flex flex-col w-full items-center space-y-6`}>
+                    <Link href="/" className="hover:underline text-grayBedri">Ana Sayfa</Link>
                     <Link href="/about" className="hover:underline text-grayBedri">Hakkımızda</Link>
                     <Link href="/projects" className="hover:underline text-grayBedri">Projeler</Link>
                     <Link href="/contact" className="hover:underline text-grayBedri">İletişim</Link>

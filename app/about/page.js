@@ -1,104 +1,62 @@
 "use client";
 
-import dsiLogo from "../../img/corporate-logo/logo-dsi.png"
-import Image from "next/image"
+import { RocketLaunchIcon, MapIcon } from '@heroicons/react/24/outline'
 
-const ongoingProjects = [
+const features = [
+
+
   {
-    name: 'Ankara İli Gölbaşı-Bala İlçeleri Merkez Mahallerde Atıksu ve Yağmursuyu Hatları Yapım İşi',
-    author: 'ASKİ',
-    year: '2021',
-    id: '1',
-    imgSrc: 'https://images.unsplash.com/photo-1575281923032-f40d94ef6160?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    name: 'misyon',
+    description:
+      'Tüm projelerimizde sözümüzü tutar, işimizi iyi yapar ve itibarımızı sürekli yükseltiriz. Projelerimizi fark yaratacak bir biçimde gerçekleştirmeye gayret ederiz. ZARA Taahhüt başladığı her projeyi bitirme azmi gösteren, açık, saydam, bilgi işleyerek karar veren, yenilikçi, estetik tutum sergileyen bir şirkettir. Faaliyet gösterdiği bölgelerin tarihine, geleneklerine, örf ve âdetlerine ve doğasına saygılıdır, duyarlıdır.',
+    icon: RocketLaunchIcon,
   },
   {
-    name: 'Gümüşhane Kelkit Sütveren Barajı İkmali 2Kısım',
-    author: 'DSİ 22. BÖLGE',
-    year: '2023',
-    id: '2',
-    imgSrc: 'https://images.unsplash.com/photo-1569918190173-6a5792908184?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80',
-  },
-  {
-    name: 'Bolu Merkez 100 Yataklı Uygulama Oteli Binası İnşaatı Yapım İşi',
-    author: 'ÖZEL İDARE BOLU',
-    year: '2023',
-    id: '3',
-    imgSrc: 'https://images.unsplash.com/photo-1583248483203-555f3d850303?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    name: 'KGM 16. Bölge Dahili Yollarında Bilgi Levhası Ve Konstrüksiyon Yapılması İşi ',
-    author: 'KGM 16. BÖLGE',
-    year: '2023',
-    id: '4',
-    imgSrc: 'https://images.unsplash.com/photo-1501459522532-9f67219c9c7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
-  },
-  {
-    name: ' İstanbul Ataşehir Polis Merkezi Amirliği Yapım İşi',
-    author: 'YİKOB İSTANBUL',
-    year: '2023',
-    id: '5',
-    imgSrc: 'https://images.unsplash.com/photo-1559750008-0e880c81d4b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    name: 'Tunceli - Pülümür Heyelan Islahı Yapım İşi',
-    author: 'KGM 8. BÖLGE',
-    year: '2016',
-    id: '6',
-    imgSrc: 'https://images.unsplash.com/photo-1603814929877-d5d927322656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    name: 'Eğiste Hadim Viyadüğü ve Bağlantı Yolu Çevre Düzenlemesi ve Peyzaj İşleri Yapılması',
-    author: 'KGM 3. BÖLGE',
-    year: '2022',
-    id: '7',
-    imgSrc: 'https://images.unsplash.com/photo-1609183091878-e8f47a9fac2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-  },
-  {
-    name: 'Baskil Hükümet Konağı Yapım İşi',
-    author: 'ÖZEL İDARE ELAZIĞ',
-    year: '2022',
-    id: '8',
-    imgSrc: 'https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
-  },
-  {
-    name: 'Karayolları 8 Bölge Müdürlüğü Kaplama Üstü Levha Taşıyıcı Konstrüksiyonu, Bilgi Levhaları İmali ve Yerine Konulması ve Levha Montajı Yapımı İşi',
-    author: 'KGM 8. BÖLGE',
-    year: '2022',
-    id: '9',
-    imgSrc: 'https://images.unsplash.com/photo-1618492184911-693a1eadeb82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80',
-  },
-  {
-    name: 'Karayolları 8. Bölge Müdürlüğü İstenilen Tiplerde Mıcır, Temel ve Plent Malzemesi Temini, Nakli ve Figüre Edilmesi Yapım İşi',
-    author: 'KGM 8. BÖLGE',
-    year: '2022',
-    id: '10',
-    imgSrc: 'https://images.unsplash.com/photo-1583156551472-05072507d558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    name: 'KGM 4 Bölge Müdürlüğü Yaya Üstgeçitlerinin Bakım Ve Onarım İşlerinin Yapılması İşi ',
-    author: 'KGM 4. BÖLGE',
-    year: '2023',
-    id: '11',
-    imgSrc: 'https://plus.unsplash.com/premium_photo-1664443297267-4eddc85b78ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80',
+    name: 'vizyon',
+    description:
+      'ZARA Taahhüt üstlenmiş olduğu projelerin tamamında, Türkiye’nin kalkınmasını, müşterilerinin, çalışanlarının, ortaklarının memnuniyetini ve şirket değerlerini en ön planda gözetir. ZARA Taahhüt, faaliyetlerini ilkesel ve kurumsal değerlere uygun şekilde sürdürme sorumluluğunda olduğunun bilincindedir. Yüklendiği her projede ülke çapında saygın olma hedefinin bilinciyle çalışır ve bu hedefine ulaşır. ZARA Taahhüt, yüklendiği tüm işleri ve tüm faaliyetlerini, net artı değer üretecek ve fark yaratacak biçimde gerçekleştirir.',
+    icon: MapIcon,
   },
 ]
 
+
 function About() {
   return (
-    <div className="flex flex-col items-stretch px-3 justify-between mb-6 md:grid md:gap-4 md:grid-cols-3 md:grid-rows-3 md:px-0">
-      {ongoingProjects.map((project) => (
-        <div key={project.id} className="relative flex flex-col mt-6 items-center justify-between w-full h-screen bg-cover bg-center bg-opacity-50 rounded-lg hover:bg-white" style={{ backgroundImage: `url(${project.imgSrc})`}}>
-          <h2 className="text-white text-3xl text-center px-6 pt-12 font-bold z-40 leading-relaxed">{project.name}</h2>
-          <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center justify-center z-40 mb-6 rounded-full w-36 h-36 bg-black/50">
-              <p className="text-xl font-bold">{project.year}</p>
-              <h3 className="text-2xl font-bold text-center">{project.author}</h3>
-            </div>
-            <Image className="z-40 mb-6" src={dsiLogo} alt="dsi" width={100}/>
-          </div>
-          <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/30" />
+    <div className="py-12">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-2xl text-center font-semibold leading-7 text-brightRed">Hakkımızda</h2>
+          <p className="mt-6 text-lg leading-8 text-center text-grayBedri">
+            ZARA TAAHHÜT A.Ş. 2014 yılında Yönetim Kurulu Başkanımız Sayın <span className='text-brightRed'><strong>Emre Demirci</strong></span> tarafından kamu taahhüt projelerinin yapımını gerçekleştirmek üzere kurulmuştur. ZARA Taahhüt tüm ülke çapında altyapıdan üstyapıya çeşitli inşaat projelerinin yapımını gerçekleştirir, <span className='text-brightRed'><strong>riskleri iyi yöneterek</strong></span>, ürün ve hizmetlerini taahhüt ettiği <span className='text-brightRed'><strong>kalitede</strong></span>, <span className='text-brightRed'><strong>sürede</strong></span> ve öngörülen <span className='text-brightRed'><strong>bütçede</strong></span> tamamlama hedefine daima ulaşır.<br/>
+            Tüm faaliyetlerinde Türkiye’nin kalkınmasını; müşterilerinin, çalışanlarının ve ortaklarının memnuniyetini ve şirket değerlerini en ön planda tutan Zara Taahhüt; doğanın gösterdiği çözüm yollarından ilham alarak 
+            <strong>
+              <span className='text-brightRed'> bilgi ve teknolojiye</span>, 
+            </strong>
+            <strong>
+              <span className='text-brightRed'> insan kaynaklarına</span>
+            </strong>  ve
+            <strong>
+              <span className='text-brightRed'> yeni yönetim sistemlerine </span>
+            </strong>
+            sürekli yatırım yapar.
+          </p>
         </div>
-      ))}
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-16">
+                <dt className="text-center font-semibold leading-7 text-brightRed">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black">
+                    <feature.icon className="h-6 w-6 text-brightRed" aria-hidden="true" />
+                  </div>
+                  <strong>{feature.name}</strong>                
+                </dt>
+                <dd className="mt-2 text-base leading-7 text-grayBedri">{feature.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
     </div>
   )
 }

@@ -6,6 +6,9 @@ import Footer from '@/components/Footer'
 export const metadata = {
   title: 'ZARA A.Ş.',
   description: 'ZARA Taahhüt İnşaat A.Ş.',
+  icons: {
+    icon: '/app/favicon.ico',
+  },
 }
 
 const inter = Inter({ subsets: ['latin'], weight: ['400']})
